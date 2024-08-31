@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPA IT Application Validation</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FPA IT Application Validation</h1>
+        <form id="validationForm">
+            <div class="form-group">
+                <label for="environment">Select Environment:</label>
+                <select class="form-control" id="environment" name="environment">
+                    <option value="IT">IT</option>
+                    <option value="QV">QV</option>
+                    <option value="Prod">Prod</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Start Validation</button>
+        </form>
+        <div class="status-container mt-5">
+            <h2>Status: <span id="statusText">Not Started</span></h2>
+            <ul id="statusList"></ul>
+        </div>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
