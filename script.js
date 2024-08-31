@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     validationForm.addEventListener("submit", function (e) {
         e.preventDefault();
         const environment = document.getElementById("environment").value;
+        statusText.className = "badge badge-warning";
         statusText.textContent = "Running...";
         statusList.innerHTML = "";
 
@@ -28,10 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => response.json())
             .then(data => {
                 statusText.textContent = data.status;
+                statusText.className = data.status === "Completed" ? "badge badge-success" : "badge badge-danger";
                 statusList.innerHTML = "";
                 data.results.forEach(result => {
                     const li = document.createElement("li");
+                    li.className = "list-group-item";
                     li.textContent = result[0];
+                    const statusIcon = document.createElement("i");
+                    statusIcon.className = result[1] === "Success" ? "fas fa-check-circle text-success" : "fas fa-times-circle text-danger";
+                    li.appendChild(statusIcon);
                     statusList.appendChild(li);
                 });
             });
