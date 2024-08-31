@@ -1,0 +1,80 @@
+{
+    "environments": {
+        "IT": "https://itintranet1.keybank.com/fpa/Login",
+        "QV": "https://qintranet1.keybank.com/fpa/Login",
+        "Prod": "https://intranet1.keybank.com/fpa/Login"
+    },
+    "main_tabs": {
+        "Users": {
+            "url": "/fpa/Usr",
+            "content_locator": "table.ListView"
+        },
+        "User Roles": {
+            "url": "/fpa/UsrRoles",
+            "content_locator": "table.ListView"
+        },
+        "Accounts": {
+            "url": "/fpa/Acct",
+            "content_locator": "table.ListView"
+        },
+        "GL/CC's": {
+            "url": "/fpa/GlCstCntr",
+            "content_locator": "table.ListView"
+        },
+        "Printers": {
+            "url": "/fpa/Printer",
+            "content_locator": "table.ListView"
+        },
+        "Misc. Lookups": {
+            "url": "/fpa/AdminMiscLookup",
+            "content_locator": "table.ListView"
+        },
+        "Check Mgmt.": {
+            "url": "/fpa/CheckManagement",
+            "content_locator": "table.ListView"
+        },
+        "Archive": {
+            "url": "/fpa/Archive",
+            "content_locator": "table.ListView"
+        }
+    },
+    "sub_tabs_map": {
+        "Users": {
+            "Active": {
+                "js": "showList('Active', 'Usr');",
+                "content_locator": "#content"
+            },
+            "Not Active": {
+                "js": "showListNew('InActive', 'Usr');",
+                "content_locator": "#content"
+            },
+            "All": {
+                "js": "showListNew('All', 'Usr');",
+                "content_locator": "#content"
+            }
+        },
+        "User Roles": {
+            "Active": {
+                "js": "showList('Active', 'UsrRoles');",
+                "content_locator": "#content"
+            },
+            "Not Active": {
+                "js": "showListNew('InActive', 'UsrRoles');",
+                "content_locator": "#content"
+            },
+            "All": {
+                "js": "showListNew('All', 'UsrRoles');",
+                "content_locator": "#content"
+            }
+        }
+    },
+    "column_indices": {
+        "Users": 2,
+        "User Roles": 2,
+        "Accounts": 2,
+        "GL/CC's": 3,
+        "Printers": 2,
+        "Misc. Lookups": 2,
+        "Check Mgmt.": 4
+    }
+}
