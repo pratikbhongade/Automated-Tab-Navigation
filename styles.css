@@ -1,23 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-image: url('/static/img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
     color: #343a40;
-    padding: 20px;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.main-container {
+    margin-top: 10vh;
 }
 
-.status-container {
-    margin-top: 20px;
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
 }
 
-button {
-    margin-top: 10px;
+.card-header {
+    border-radius: 15px 15px 0 0;
+}
+
+.status-container h4 {
+    display: flex;
+    align-items: center;
+}
+
+.status-container h4 .badge {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-group-item i {
+    margin-left: 10px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
 }
